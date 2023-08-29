@@ -1,0 +1,82 @@
+body
+{
+    background-color: #6082B6;
+}
+
+.login-container
+{
+    border: 0px solid white;
+    width: 600px;
+    height: 300px;
+    margin: 70px auto auto auto;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+#header
+{
+    text-align: center;
+    background-color: deepskyblue;
+    border: 1px solid deepskyblue;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 0px;
+    height: 100px;
+    color: white;
+}
+
+button
+{
+    background-color: deepskyblue;
+    border-radius: 10px;
+    border: 1px;
+    margin: 20px 10px 10px;
+    margin-left: 80%;
+    width: 100px;
+    height: 40px;
+    color: white;
+}
+
+#uname, #psw
+{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 560px;
+    border-radius: 10px;
+    display: block;
+    height: 30px;
+    border-color: #FFFFF0;
+}
+
+button:hover, button:focus 
+{
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+input:focus
+{
+    outline: none;
+}
+
+.speech-bubble-1 {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble-1:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 1.469em solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -0.734em;
+	margin-bottom: -1.469em;
+}
