@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Injection</title>
     <link rel="stylesheet" href="practice.css">
+    <script src="practice.js"></script>
 </head>
 <body>
 
-    <div class="speech-bubble-1">
-        <p>Lorem ipsum fasz</p>
+    <div id="speech-bubble-1">
+        <p>This is the vulnerable site, that we will be <br> trying to hack with an SQL injection attack.</p>
+        <input type="button" id="tick-button" value="✓" onclick="firstStep()"/>
     </div>
 
-    <div class="login-container">
-        <div id="header">
-            <h1>e-Chalk</h1>
+    <div id="parent">
+        <div id="invalid-credentials">Unkown email or password</div>
+        <div id="login-container">
+            <div id="header">
+                <h1>e-Chalk</h1>
+            </div>
+            <div>    
+                <input type="text" id="uname" placeholder="Enter Email" name="uname" required>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+    
+                <button id="login-button" type="submit" onclick="login()">Login</button>
+            </div>
         </div>
 
-        <!-- <label for="uname"><b>Username</b></label> -->
-        <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
-    
-        <!-- <label for="psw"><b>Password</b></label> -->
-        <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
-    
-        <button type="submit">Login</button>
-      </div>
+        <div id="speech-bubble-3">
+            <p>At first try to use these credentials:</p>
+            <p>Username:     user@email.com</p>
+            <p>Password:     password</p>
+        </div>
+    </div>
+    <div id="console" style="display: none;">
+        <p>Logs...</p>
+        <p id="first-one">Checking supplied authentication details for x.</p>
+        <p id="second-one">Finding user in database.</p>
+        <p id="third-one">No such user, report this to the user (invalid credentials?).</p>
+        <p id="fourth-one">Rendering login page.</p>
+    </div>
+
+    <div id="speech-bubble-2">
+        <p>Here are the logs of the application.<br>Watch what happens when we try to hack in</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="secondStep()"/>
+    </div>
+
+
 </body>
 
 

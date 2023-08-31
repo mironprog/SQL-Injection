@@ -3,12 +3,12 @@ body
     background-color: #6082B6;
 }
 
-.login-container
+#login-container
 {
     border: 0px solid white;
     width: 600px;
     height: 300px;
-    margin: 70px auto auto auto;
+    margin: 25px auto auto auto;
     background-color: white;
     border-radius: 15px;
 
@@ -25,7 +25,7 @@ body
     color: white;
 }
 
-button
+#login-button
 {
     background-color: deepskyblue;
     border-radius: 10px;
@@ -37,7 +37,7 @@ button
     color: white;
 }
 
-#uname, #psw
+#uname, #password
 {
     margin-top: 20px;
     margin-right: 10px;
@@ -49,7 +49,7 @@ button
     border-color: #FFFFF0;
 }
 
-button:hover, button:focus 
+#login-button:hover, #login-button:focus 
 {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
@@ -60,13 +60,22 @@ input:focus
     outline: none;
 }
 
-.speech-bubble-1 {
+#speech-bubble-1 
+{
 	position: relative;
 	background: #00aabb;
 	border-radius: .4em;
+    width: fit-content;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 5px;
+    box-shadow: 0 0 0 9999px #000000b0;
 }
 
-.speech-bubble-1:after {
+#speech-bubble-1:after 
+{
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -76,7 +85,97 @@ input:focus
 	border: 1.469em solid transparent;
 	border-top-color: #00aabb;
 	border-bottom: 0;
-	border-left: 0;
-	margin-left: -0.734em;
+	margin-left: -1.469em;
 	margin-bottom: -1.469em;
+}
+
+#tick-button, #tick-button-2
+{
+    background-color: grey;
+    border-radius: 30px;
+    border: none;
+    margin-left: 90%;
+}
+
+#tick-button:hover, #tick-button-2:hover
+{
+    background-color: lightgray;
+}
+
+#console
+{
+    background-color: lightslategrey;
+    margin-top: 30px;
+    width: 700px;
+    height: 150px;
+    color: white;
+    line-height: 4px;
+}
+
+#speech-bubble-2 {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+    width: fit-content;
+    height: 100px;
+    margin-top: 40px;
+    display: none;
+    margin-left: 280px;
+    padding-top: 10px;
+}
+
+#speech-bubble-2:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 1.469em solid transparent;
+	border-bottom-color: #00aabb;
+	border-top: 0;
+	margin-left: -1.469em;
+	margin-top: -1.469em;
+}
+
+#parent
+{
+    flex: 1;
+}
+
+#speech-bubble-3 {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+    width:fit-content;
+    margin-top: -220px;
+    display: none;
+    margin-bottom: 150px;
+}
+
+#speech-bubble-3:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.469em solid transparent;
+	border-left-color: #00aabb;
+	border-right: 0;
+	margin-top: -1.469em;
+	margin-right: -1.469em;
+}
+
+#invalid-credentials
+{
+    width: 300px;
+    margin-left: 38%;
+    border: 2px white;
+    background-color: lightcoral;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    height: 25px;
+    display: none;
 }
