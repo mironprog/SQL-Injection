@@ -16,6 +16,7 @@
 
     <div id="parent">
         <div id="invalid-credentials">Unkown email or password</div>
+        <div id="invalid-credentials-2">Unexpected error happened</div>
         <div id="login-container">
             <div id="header">
                 <h1>e-Chalk</h1>
@@ -33,20 +34,61 @@
             <p>Username:     user@email.com</p>
             <p>Password:     password</p>
         </div>
-    </div>
-    <div id="console" style="display: none;">
-        <p>Logs...</p>
-        <p id="first-one">Checking supplied authentication details for x.</p>
-        <p id="second-one">Finding user in database.</p>
-        <p id="third-one">No such user, report this to the user (invalid credentials?).</p>
-        <p id="fourth-one">Rendering login page.</p>
-    </div>
 
+        <div id="speech-bubble-4">
+            <p>Of course, it didn't work.
+            <p>Let's try something else.</p>
+            <p>Add a quote character after the</p>
+            <p>password:</p>
+            <p>Username:    user@email.com</p>
+            <p>Password:    password'</p>
+            
+        </div>
+    </div>
+    <div id="console-code">
+        
+        <div id="console" style="display: none;">
+            <p>Logs:</p>
+            <p id="first-one" style="display: none;">Checking supplied authentication details for x.</p>
+            <p id="second-one" style="display:none;">Finding user in database.</p>
+            <p id="third-one" style="display: none;">No such user, report this to the user (invalid credentials?).</p>
+            <p id="fourth-one" style="display:none;">Rendering login page.</p>
+            <p id="fifth-one" style="display: none;">Checking supplied authentication details for .</p>
+            <p id="sixth-one" style="display: none;">Finding user in database.</p>
+            <p id="seventh-one" style="display: none; color:red;">An error occurred: PG::SyntaxError: ERROR: unterminated quoted string at or near "'password''</p>
+            <p id="eighth-one" style="display: none; color:red;">limit 1" LINE 1: ...lect * from users where email =</p>
+            <p id="ninth-one" style="display: none; color:red;">'' and password = 'password'... ^ : select * from users where email = '' and password = 'password'' limit 1.</p>
+            <p id="tenth-one" style="display: none; color:red;">Unable to login this user due to unexpected error.</p>
+            <p id="eleventh-one" style="display: none;">Rendering login page.</p>
+        </div>
+
+        <div id="code">
+            <p style="color:white; padding-bottom: 10px;">Code:</p>
+            <p style="color:green; padding-left: 20px;">SELECT <a style="color: white;">*</a></p>
+            <p style="color:green; padding-left: 20px;">FROM <a style="color: white;">users</a></p>
+            <p style="color:green; padding-left: 20px;">WHERE <a style="color: white;">email = <a style="color:blueviolet">' '</a></p>
+            <p style="color:green; padding-left: 20px;">AND <a style="color: white;">pass = <a style="color: blueviolet;">' '</a><a style="color:white"> LIMIT 1</a></p>
+        </div>
+    
+    </div>
     <div id="speech-bubble-2">
         <p>Here are the logs of the application.<br>Watch what happens when we try to hack in</p>
         <input type="button" id="tick-button-2" value="✓" onclick="secondStep()"/>
     </div>
 
+    <div id="speech-bubble-5">
+        <p>The application crashed with an<br>unexpected error. What could it mean?</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="thirdStep()"/>
+    </div>
+    <div id="speech-bubble-6">
+        <p>The logs showed us an SQL syntax error<br>This indicates that we messed something up</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="fourthStep()"/>
+    </div>
+
+    <div id="speech-bubble-7">
+        <p>This is what the application code<br>looks like under the hood</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="fifthStep()"/>
+    </div>
 
 </body>
 
