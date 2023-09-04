@@ -1,0 +1,30 @@
+#container
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 20px;
+    height: fit-content;
+    width: 1000px;
+    margin: 70px auto auto auto;
+    background-color: #fff;
+    box-shadow: 5px 10px 18px #888888;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+body
+{
+    background-color: #F0F0F0;
+}
+
+#text
+{
+    text-indent: 40px;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.header
+{
+    color: #4F5E65;
+}
