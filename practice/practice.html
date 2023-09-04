@@ -25,14 +25,29 @@
                 <input type="text" id="uname" placeholder="Enter Email" name="uname" required>
                 <input type="password" id="password" placeholder="Enter Password" name="psw" required>
     
-                <button id="login-button" type="submit" onclick="login()">Login</button>
+                <button id="login-button" type="submit" onclick="login(); click()">Login</button>
             </div>
+        </div>
+
+        <div id="logged-screen">
+            <h1 style="color:#29AB87">Congratulations! You are in!</h1>
+            <p>You have succesfully gained acces to the application without having to guess the password, using SQL INJECTION</p>
+            <a href="../protection/protection.html">
+                <button id="protect-button-30">Teach me how to protect against!</button>
+            </a>
+            
         </div>
 
         <div id="speech-bubble-3">
             <p>At first try to use these credentials:</p>
             <p>Username:     user@email.com</p>
             <p>Password:     password</p>
+        </div>
+
+        <div id="speech-bubble-11">
+            <p>Enter the following <br>credentials and log in:</p>
+            <p>Username:     user@email.com</p>
+            <p>Password:     ' or 1=1--</p>
         </div>
 
         <div id="speech-bubble-4">
@@ -44,12 +59,18 @@
             <p>Password:    password'</p>
             
         </div>
+
+        <div id="speech-bubble-8">
+            <p>So look what happens when we enter <a style="color: grey;">password'</a><br>and watch the code window</p>
+            <input type="button" id="tick-button-2" value="✓" onclick="sixthStep()"/>
+        </div>
+
     </div>
     <div id="console-code">
         
         <div id="console" style="display: none;">
             <p>Logs:</p>
-            <p id="first-one" style="display: none;">Checking supplied authentication details for x.</p>
+            <p id="first-one" style="display: none;">Checking supplied authentication details for user@email.com.</p>
             <p id="second-one" style="display:none;">Finding user in database.</p>
             <p id="third-one" style="display: none;">No such user, report this to the user (invalid credentials?).</p>
             <p id="fourth-one" style="display:none;">Rendering login page.</p>
@@ -67,7 +88,7 @@
             <p style="color:green; padding-left: 20px;">SELECT <a style="color: white;">*</a></p>
             <p style="color:green; padding-left: 20px;">FROM <a style="color: white;">users</a></p>
             <p style="color:green; padding-left: 20px;">WHERE <a style="color: white;">email = <a style="color:blueviolet">' '</a></p>
-            <p style="color:green; padding-left: 20px;">AND <a style="color: white;">pass = <a style="color: blueviolet;">' '</a><a style="color:white"> LIMIT 1</a></p>
+            <p style="color:green; padding-left: 20px;">AND <a style="color: white;">pass = <a style="color: blueviolet;">'password''</a><a style="color:white"> LIMIT 1</a></p>
         </div>
     
     </div>
@@ -88,6 +109,16 @@
     <div id="speech-bubble-7">
         <p>This is what the application code<br>looks like under the hood</p>
         <input type="button" id="tick-button-2" value="✓" onclick="fifthStep()"/>
+    </div>
+
+    <div id="speech-bubble-9">
+        <p>The quote is inserted directly into the SQL<br>and terminates the query early</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="seventhStep()"/>
+    </div>
+
+    <div id="speech-bubble-10">
+        <p>This behaviour indicates that the application<br>might be vulnerable to SQL INJECTION</p>
+        <input type="button" id="tick-button-2" value="✓" onclick="eighthStep()"/>
     </div>
 
 </body>
